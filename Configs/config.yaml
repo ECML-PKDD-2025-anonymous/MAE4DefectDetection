@@ -1,0 +1,58 @@
+# HYDRA config parameters 
+
+# dataset
+img_size: 64
+num_channels: 1
+dataset: sam
+mode: pairwise
+use_tta_df: False
+
+# data preprocessing
+augmentations: True
+hflip_prob: 0.2
+vflip_prob: 0.2
+crop_prob: 0.2
+crop: fixed
+
+# trainer
+train_size: 0.6
+batch_size: 64
+epochs: 200
+tolerance: 50
+generator: vit
+patch_size: 8
+vit_size: ti
+classification_mode: end2end
+
+# baselines
+use_baseline: False
+baseline_model: resnet50
+
+# optimizer
+optimizer: adamw
+lr: 1.0e-4
+warmup_epochs: 10
+loss: mse
+
+# pretraining
+use_pretrained_model: False
+pretrained_model: None
+pretrain_mode: mae
+only_pretrain: False
+pretrain_epochs: 1000
+mask_ratio: 0.75
+adversarial_pretraining: False 
+update_whole_disc: True
+
+# logging
+vis_freq: 100
+save_freq: 1000
+print_freq: 1
+
+# distributed processing
+device: cuda
+num_workers: 4
+pin_memory: True 
+
+# randomness
+seed: 42
