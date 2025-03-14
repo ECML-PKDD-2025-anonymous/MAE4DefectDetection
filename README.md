@@ -1,10 +1,9 @@
 # Masked Autoencoder Self Pre-Training for Defect Detection in Microelectronics
 
-This is a PyTorch implementation of Masked Autoencoders and Vision Transformers for our paper "Masked Autoencoder Self Pre-Training for Defect Detection in Microelectronics". 
 
 ## Overview
 
-This repository contains the official implementation of our paper, which proposes a Masked Autoencoders (MAE) self pre-training approach to defect detection in microelectronics.
+This repository contains the official pytorch implementation of our paper "Masked Autoencoder Self Pre-Training for Defect Detection in Microelectronics". We propse a Masked Autoencoder (MAE) self pre-training framework for defect detection with vision transformer (ViT), and demonstrate that with our framework, ViT can substantially outperform state-of-the-art CNN defect detection models.
 
 ![Model Architecture](MAE.png)
 
@@ -30,7 +29,7 @@ dataset: sam | imagenet
 vit_size: ti | s | b  # tiny, small, or base
 
 # Use pre-trained encoder from pre-training: 
-pretrained_model: path_to_model 
+pretrained_model: PATH_TO_MODEL 
 
 # Use baselines for Fault Detection
 use_baseline: True | False 
